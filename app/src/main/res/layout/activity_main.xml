@@ -4,4 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"/>
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ответ"
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="667dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Загадка"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="667dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="388dp"
+        android:layout_height="347dp"
+        android:text="Текст загадки\nкоторый может быть\nочень очень\nбольшим"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="11dp"
+        tools:layout_editor_absoluteY="16dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
