@@ -1,36 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button3"
+    <TextView
+        android:id="@+id/statisticTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Ответ"
-        tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="667dp"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Загадка"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="667dp"
-        tools:ignore="MissingConstraints" />
+        android:layout_marginBottom="36dp"
+        android:gravity="center"
+        android:text="После решения всех 10 загадок будет доступна Статистика"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/statisticsButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="388dp"
-        android:layout_height="347dp"
-        android:text="Текст загадки\nкоторый может быть\nочень очень\nбольшим"
-        android:textSize="25dp"
+        android:id="@+id/resultTextView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="144dp"
+        android:gravity="center"
+        android:text=" "
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="11dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/answerButton" />
+
+    <TextView
+        android:id="@+id/riddleNumberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Загадок всего десять"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/riddleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:text="Чтобы начать решать - нажмите 'Загадка'"
+        app:layout_constraintTop_toBottomOf="@id/riddleNumberTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/getRiddleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Загадка"
+        app:layout_constraintTop_toBottomOf="@id/riddleTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"/>
+
+    <Button
+        android:id="@+id/answerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ответ"
+        app:layout_constraintTop_toBottomOf="@id/getRiddleButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:enabled="false"/>
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:text="Повторно нажимая кнопку 'Загадка' можно получить другую загадку"
+        app:layout_constraintTop_toBottomOf="@id/answerButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/statisticsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Статистика"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="32dp"
+        android:enabled="false"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

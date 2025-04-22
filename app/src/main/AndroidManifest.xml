@@ -25,6 +25,16 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity
+            android:name=".AnswerActivity"
+            android:exported="false"
+            android:label="Ответ">
+        </activity>
+        <activity
+            android:name=".StatisticsActivity"
+            android:exported="false"
+            android:label="Статистика">
+        </activity>
     </application>
 
 </manifest>
